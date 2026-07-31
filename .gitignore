@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# 納品用バンドル（リポジトリには不要・容量削減）
+kameda-site.zip
