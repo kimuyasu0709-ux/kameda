@@ -143,6 +143,7 @@ h1,h2,h3{font-family:var(--serif);color:var(--navy);font-weight:600;line-height:
    ============================================================ */
 .hero{position:relative;width:100%;min-height:680px;display:flex;align-items:center;padding-top:140px;background:#fbfaf6;overflow:hidden;isolation:isolate}
 .hero__media{position:absolute;inset:0;z-index:1}
+.hero__media picture{display:contents}
 .hero__media img{width:100%;height:100%;object-fit:cover;object-position:center center}
 .hero__scrim{position:absolute;inset:0;z-index:2;
   background:linear-gradient(100deg,rgba(251,250,246,.55) 0%,rgba(251,250,246,.30) 28%,rgba(251,250,246,0) 52%);}
@@ -356,8 +357,8 @@ h1,h2,h3{font-family:var(--serif);color:var(--navy);font-weight:600;line-height:
 }
 @media(max-width:768px){
   .hero{min-height:0;padding-bottom:40px}
-  .hero__media{position:relative;inset:auto;height:clamp(240px,64vw,380px);margin-top:24px;border-radius:20px;overflow:hidden;width:100%}
-  .hero__media img{object-position:62% center}
+  .hero__media{position:relative;inset:auto;aspect-ratio:4/3;height:auto;max-height:460px;margin-top:24px;border-radius:20px;overflow:hidden;width:100%}
+  .hero__media img{object-position:center 32%}
   .hero__scrim{display:none}
   .hero-inner{padding:36px 0 0;display:flex;flex-direction:column}
   .hero__copy{max-width:none;order:1}
@@ -439,7 +440,7 @@ h1,h2,h3{font-family:var(--serif);color:var(--navy);font-weight:600;line-height:
         </a>
       </div>
     </div>
-    <div class="hero__media"><img src="src/fv.jpg" alt="炊きたてのごはんを囲む家族の食卓"></div>
+    <div class="hero__media"><picture><source media="(max-width:768px)" srcset="src/fv-mobile.jpg"><img src="src/fv.jpg" alt="炊きたてのごはんを囲む家族の食卓"></picture></div>
     <div class="hero__stats">
         <div class="hero__stat">
           <span class="stat-label">創業</span>
