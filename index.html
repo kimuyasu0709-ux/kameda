@@ -341,7 +341,7 @@ h1,h2,h3{font-family:var(--serif);color:var(--navy);font-weight:600;line-height:
   .gnav{position:fixed;top:140px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);
     max-height:0;overflow:hidden;opacity:0;visibility:hidden;
     transition:max-height .5s ease,opacity .4s ease,visibility .5s;margin-left:0}
-  .header.nav-open .gnav{max-height:70vh;opacity:1;visibility:visible}
+  .header.nav-open .gnav{max-height:calc(100dvh - 140px);overflow-y:auto;-webkit-overflow-scrolling:touch;opacity:1;visibility:visible}
   .gnav ul{flex-direction:column;gap:0;padding:6px 0}
   .gnav li{border-top:1px solid var(--line)}
   .gnav li:first-child{border-top:0}
